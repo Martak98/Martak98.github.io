@@ -604,3 +604,66 @@ button:hover, .form-container .btn:hover {
 #Projects a:hover {
     color: #FAEBD7;
 }
+
+/* Fix overlapping sections */
+.Row {
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+    clear: both;
+}
+
+/* Makes both columns sit next to each other properly */
+.Column_1,
+.Column_2 {
+    width: 50%;
+    float: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Makes images fit inside their columns */
+.Column_1 img,
+.Column_2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Gives the Projects section enough space */
+#Projects {
+    clear: both;
+    min-height: 650px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Gives GitHub section space so it does not sit on Projects */
+#GitHub {
+    clear: both;
+    min-height: 500px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Gives Contact section space */
+#Contact {
+    clear: both;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Mobile/tablet fix */
+@media screen and (max-width: 768px) {
+    .Row {
+        display: block;
+        min-height: auto;
+    }
+
+    .Column_1,
+    .Column_2 {
+        width: 100%;
+        display: block;
+    }
+}
