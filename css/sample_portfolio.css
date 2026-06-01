@@ -106,56 +106,41 @@ footer {
 /***** End of General Styling *****/
 
 /***** Navbar Styling *****/
+/* Navbar */
 .Navbar {
-    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: #5e23ff; /* This colors the navbar black */
-    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 0; /* This ensures no space is displayed above the navbar */
-    width: 100%; /* This makes the navbar span the entire width of the page */
-    z-index: 1; /* This ensures other elements don't display over the navbar */
-    -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
-    animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
 }
 
-/* The animation effect for moving the nav bar in from above the left of the screen on page load */
-@keyframes moveNav {
-    from {left: -100vw;} /* The navbar is starting off screen to the left */
-    to { left: 0vw;} /* This moves the navbar into place on the screen */
-}
-
-/*Navbar Links */
+/* Navbar links */
 .Navbar a {
-    float: left; /* This specifies that the text floats on the left on the navbar */
-    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: white; /* This is the font color for text on our navbar */
-    padding: .75vw 1vw; /* This adds padding around our text */
-    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-    font-size: 1.5vw; /* This specifies the font size for text on our navbar */
-    text-align: center; /* This centers the text within its container */
-    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+    float: none;
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: Avant Garde, Helvetica;
+    font-size: 20px;
+    text-align: center;
 }
 
-/* The animation effect for moving the nav bar links in from above the top of the screen on page load */
-@keyframes moveNavText {
-    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
-    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
-}
-
-/*Navbar hover effects */
+/* Hover effect */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
-    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
-    cursor: pointer;
-    transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s ease-in;
 }
 
-/* Navbar home button */
-.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
+/* Active navbar button */
+.Navbar a.active {
     background-color: white;
+    color: black;
 }
 /***** End of Navbar Styling *****/
 
