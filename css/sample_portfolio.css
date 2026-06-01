@@ -296,18 +296,23 @@ footer {
 
 .Column_1 {
     float: left;
-    width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 1.6%;
-    height: auto; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the left columns */
+    width: 50%;
+    padding: 20px;
+    padding-top: 3%;
+    min-height: 400px;
+    height: auto;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
 }
 
 .Column_2 {
     float: left;
     width: 50%;
-    padding: 1.6%;
+    padding: 20px;
+    padding-top: 3%;
+    min-height: 400px;
     height: auto;
-    background-color: #4d4d4d;
+    box-sizing: border-box;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -642,4 +647,20 @@ button:hover, .form-container .btn:hover {
     color: blue;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.Row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#Projects {
+    clear: both;
+    overflow: auto;
+}
+
+#GitHub {
+    clear: both;
+    overflow: auto;
 }
