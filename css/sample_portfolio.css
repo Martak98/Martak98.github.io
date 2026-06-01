@@ -664,3 +664,36 @@ button:hover, .form-container .btn:hover {
     clear: both;
     overflow: auto;
 }
+/* MAIN LAYOUT FIX */
+.Hero_Text {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    min-height: 80vh !important;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+    box-sizing: border-box !important;
+}
+
+#Slideshow,
+#About,
+#Projects,
+#GitHub,
+#Contact,
+footer {
+    position: relative !important;
+    clear: both !important;
+    display: block !important;
+    z-index: 1 !important;
+}
+
+.Row {
+    clear: both !important;
+    overflow: auto !important;
+}
+
+.Column_1,
+.Column_2 {
+    height: auto !important;
+    min-height: 400px !important;
+}
