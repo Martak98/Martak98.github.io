@@ -172,8 +172,11 @@ footer {
 }
 #Home {
     position: relative !important;
-    height: 100vh !important;
+    height: auto !important;
+	min-height: 100vh !important;
     overflow: hidden !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }
 
 body {
