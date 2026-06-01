@@ -605,65 +605,65 @@ button:hover, .form-container .btn:hover {
     color: #FAEBD7;
 }
 
-/* Fix overlapping sections */
+/* FINAL FIX - stops sections from overlapping */
+
 .Row {
-    display: flex;
-    width: 100%;
-    min-height: 500px;
-    clear: both;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    clear: both !important;
+    overflow: visible !important;
 }
 
-/* Makes both columns sit next to each other properly */
 .Column_1,
 .Column_2 {
-    width: 50%;
-    float: none;
-    padding: 20px;
-    box-sizing: border-box;
+    float: none !important;
+    width: 50% !important;
+    height: auto !important;
+    min-height: 500px !important;
+    padding: 30px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
 }
 
-/* Makes images fit inside their columns */
+/* Image fix */
 .Column_1 img,
 .Column_2 img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 450px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: auto !important;
 }
 
-/* Gives the Projects section enough space */
-#Projects {
-    clear: both;
-    min-height: 650px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+/* Extra space for Projects because it has more text */
+#Projects .Column_1,
+#Projects .Column_2 {
+    min-height: 700px !important;
 }
 
-/* Gives GitHub section space so it does not sit on Projects */
-#GitHub {
-    clear: both;
-    min-height: 500px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-/* Gives Contact section space */
+/* Space between sections */
+#Projects,
+#GitHub,
 #Contact {
-    clear: both;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    clear: both !important;
+    height: auto !important;
+    overflow: visible !important;
 }
 
-/* Mobile/tablet fix */
+/* Mobile fix */
 @media screen and (max-width: 768px) {
-    .Row {
-        display: block;
-        min-height: auto;
-    }
-
     .Column_1,
     .Column_2 {
-        width: 100%;
-        display: block;
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+    #Projects .Column_1,
+    #Projects .Column_2 {
+        min-height: auto !important;
     }
 }
