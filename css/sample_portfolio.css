@@ -604,3 +604,42 @@ button:hover, .form-container .btn:hover {
 #Projects a:hover {
     color: #FAEBD7;
 }
+/* Projects section - separate layout to prevent overlapping */
+.Projects_Section {
+    clear: both;
+    display: block;
+    width: 100%;
+    padding: 80px 15%;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+}
+
+.Projects_Section h1 {
+    color: #000;
+}
+
+.Projects_Section h2,
+.Projects_Section h3 {
+    color: #000;
+    font-family: "Trebuchet MS", Optima;
+}
+
+.Project_Card {
+    background-color: white;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 900px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.Project_Card p {
+    text-align: center;
+}
+
+.Projects_Section a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+}
