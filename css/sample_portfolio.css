@@ -683,36 +683,41 @@ button:hover, .form-container .btn:hover {
     clear: both;
     overflow: auto;
 }
-/* MAIN LAYOUT FIX */
-.Hero_Text {
+/* FIX HERO VIDEO GAP */
+
+#Home {
     position: relative !important;
-    top: auto !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#Typing_Video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
-    min-height: 80vh !important;
-    padding-top: 120px !important;
-    padding-bottom: 80px !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    z-index: -1 !important;
+}
+
+.Hero_Text {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 70% !important;
+    text-align: center !important;
+    color: white !important;
+    padding: 30px !important;
+    background: rgba(0, 0, 0, 0.45) !important;
     box-sizing: border-box !important;
 }
 
-#Slideshow,
-#About,
-#Projects,
-#GitHub,
-#Contact,
-footer {
-    position: relative !important;
-    clear: both !important;
-    display: block !important;
-    z-index: 1 !important;
-}
-
-.Row {
-    clear: both !important;
-    overflow: auto !important;
-}
-
-.Column_1,
-.Column_2 {
-    height: auto !important;
-    min-height: 400px !important;
+.Row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
